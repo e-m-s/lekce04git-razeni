@@ -5,9 +5,9 @@ import java.time.LocalDate;
 public class Computer implements Comparable<Computer> {
     private String description;
     private LocalDate purchaseDate;
-    private double weight;
+    private int weight;
 
-    public Computer(String description, LocalDate purchaseDate, double weight) {
+    public Computer(String description, LocalDate purchaseDate, int weight) {
         this.description = description;
         this.purchaseDate = purchaseDate;
         this.weight = weight;
@@ -29,11 +29,11 @@ public class Computer implements Comparable<Computer> {
         this.purchaseDate = purchaseDate;
     }
 
-    public double getWeight() {
+    public int getWeight() {
         return weight;
     }
 
-    public void setWeight(double weight) {
+    public void setWeight(int weight) {
         this.weight = weight;
     }
 
@@ -42,7 +42,8 @@ public class Computer implements Comparable<Computer> {
         // vrací: záporné číslo, pokud je tento počítač před otherComputer
         //        0, pokud jsou oba počítače na stejném místě
         //        kladné číslo, pokud je tento počítač za otherComputer
-        return this.getDescription().compareTo(otherComputer.getDescription());
+        //return this.getDescription().compareTo(otherComputer.getDescription());
+        return getWeight() - otherComputer.getWeight();
     }
 
     @Override

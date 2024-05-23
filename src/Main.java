@@ -38,6 +38,8 @@ public class Main {
         integers.add(3);
         integers.add(2);
 
+        // Pokus větvení...
+
         System.out.println("Před seřazením: " + integers);
         Collections.sort(integers);
         System.out.println("Po seřazení: " + integers);

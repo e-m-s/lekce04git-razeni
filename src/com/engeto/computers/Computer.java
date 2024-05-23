@@ -44,4 +44,13 @@ public class Computer implements Comparable<Computer> {
         //        kladné číslo, pokud je tento počítač za otherComputer
         return this.getDescription().compareTo(otherComputer.getDescription());
     }
+
+    @Override
+    public String toString() {
+        return "Computer{" +
+                "description='" + description + '\'' +
+                ", purchaseDate=" + purchaseDate +
+                ", weight=" + weight +
+                '}';
+    }
 }

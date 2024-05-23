@@ -2,7 +2,7 @@ package com.engeto.computers;
 
 import java.time.LocalDate;
 
-public class Computer {
+public class Computer implements Comparable<Computer> {
     private String description;
     private LocalDate purchaseDate;
     private double weight;
@@ -35,5 +35,13 @@ public class Computer {
 
     public void setWeight(double weight) {
         this.weight = weight;
+    }
+
+    @Override
+    public int compareTo(Computer otherComputer) {
+        // vrací: záporné číslo, pokud je tento počítač před otherComputer
+        //        0, pokud jsou oba počítače na stejném místě
+        //        kladné číslo, pokud je tento počítač za otherComputer
+        return this.getDescription().compareTo(otherComputer.getDescription());
     }
 }

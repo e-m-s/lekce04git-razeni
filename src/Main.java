@@ -18,6 +18,10 @@ public class Main {
         computers.add(new Computer("Def", LocalDate.of(2018, 1, 1), 2.0));
 
         // Nelze - nevím, podle čeho řadit: Collections.sort(computers);
+        // Po doplnění Comparable do Computer už to jde:
+        System.out.println("Před seřazením: " + computers);
+        Collections.sort(computers);
+        System.out.println("Po seřazení: " + computers);
         //computers.sort();
     }
 
